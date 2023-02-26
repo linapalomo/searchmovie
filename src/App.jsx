@@ -1,8 +1,10 @@
 
+import React from "react";
 import styles from "./App.module.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { MovieDetails }  from "./pages/MovieDetails";
 import { LandingPage } from "./pages/LandingPage";
+
 
 
 export function App() {
@@ -14,14 +16,14 @@ export function App() {
         </Link>
       </header>
       <main>
-        <Routes>
+        <Switch>
           <Route exact path="/movies/:movieId">
             <MovieDetails/>
           </Route>
           <Route path="/">
             <LandingPage/>
           </Route>
-        </Routes>
+        </Switch>
        
       </main>
     </Router>
