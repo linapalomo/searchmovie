@@ -5,7 +5,7 @@
     padding: 40px;
     justify-content: center;
 }
-
+/* esta media query Para adaptar la imagen a pantallas moviles*/
 @media (max-width:560px) {
     .moviesGrid{
         grid-template-columns: 100%;
