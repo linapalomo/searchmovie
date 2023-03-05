@@ -1,7 +1,7 @@
 
 import React from "react";
 import styles from "./App.module.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, Navigate} from "react-router-dom";
 import { MovieDetails }  from "./pages/MovieDetails";
 import { LandingPage } from "./pages/LandingPage";
 
@@ -9,6 +9,7 @@ import { LandingPage } from "./pages/LandingPage";
 
 export function App() {
   return (
+    
     <Router>
       <header>
         <Link to="/">
@@ -16,14 +17,12 @@ export function App() {
         </Link>
       </header>
       <main>
-        <Switch>
-          <Route exact path="/movies/:movieId">
-            <MovieDetails/>
-          </Route>
-          <Route path="/">
-            <LandingPage/>
-          </Route>
-        </Switch>
+        <Routes>
+          const navigate = useNavigate();
+        <Route path="/movies/:movieId" element={<MovieDetails />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
        
       </main>
     </Router>
