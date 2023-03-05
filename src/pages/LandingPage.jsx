@@ -5,14 +5,14 @@ import { Search } from "../components/Search";
 import { useDebounce } from "../hooks/useDebounce";
 
 export function LandingPage() {
-  const [query] = useSearchParams();
-  const search = query.get("search");
-
-  const debouncedSearch = useDebounce(search, 300);
-  return (
-    <div>
-      <Search />
-      <MoviesGrid key={debouncedSearch} search={debouncedSearch} />
-    </div>
-  );
-}
+    const [query] = useSearchParams();
+    const search = query.get("search");
+  
+    const debouncedSearch = useDebounce(search, 300);
+    return (
+      <div>
+        <Search />
+        <MoviesGrid key={debouncedSearch} search={debouncedSearch} />
+      </div>
+    );
+  }

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
+import styles from './MovieGrids.module.css';
 import { get } from "../utils/httpClient";
 import { MovieCard } from "./MovieCard";
 import {Spinner} from "./Spinner";
 import { useQuery } from "../hooks/useQuery";
-import styles from './MovieGrids.module.css';
 import InfiniteScroll from "react-infinite-scroll-component";
 import { Empty } from "./Empty";
 

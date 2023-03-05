@@ -18,7 +18,7 @@ export function App() {
       </header>
       <main>
         <Routes>
-          const navigate = useNavigate();
+          
         <Route path="/movies/:movieId" element={<MovieDetails />} />
           <Route path="/" element={<LandingPage />} />
           <Route path="*" element={<Navigate to="/" />} />
